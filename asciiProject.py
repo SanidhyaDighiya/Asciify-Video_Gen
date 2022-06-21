@@ -25,9 +25,13 @@ if bg == "white":
     bg_code = (255,255,255)
 elif bg == "black":
     bg_code = (0,0,0)
+
+#input the video
+pathin='./data/'
+s=pathin+input("Enter the .mp4 video file")
     
 
-vid = cv2.VideoCapture('./data/itachiDeath.mp4')
+vid = cv2.VideoCapture(s)
 # Getting the character List, Font and Scaling characters for square Pixels
 char_list, font, scale = get_data("complex")
 num_chars = len(char_list)
